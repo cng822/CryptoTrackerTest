@@ -15,7 +15,7 @@ npm install react-navigation
 ## Running the code ##
 
 ``` 
-$ git clone https://github.com/nordin-johan/react-native-navigation.git
+$ git clone https://github.com/cng822/CryptoTrackerTest.git
 $ npm install
 $ npm start
 ```
