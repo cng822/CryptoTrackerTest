@@ -21,6 +21,6 @@ $ npm start
 ```
 
 ## Prerequisites ##
-Node 
-EXPO CLI 
+Node, 
+EXPO CLI ,
 Visual Studio Code
