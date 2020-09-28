@@ -1,21 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState, useEffect} from 'react';
+import { StyleSheet, AppRegistry, Text, View, Image, ActivityIndicator, FlatList, TouchableOpacity, SafeAreaView, Button } from 'react-native';
+import {LineChart, Grid, LinearGradient} from 'react-native-svg-charts';
+import { Line } from "react-native-svg";
+import * as shape from "d3-shape";
+import {Header, HistoryPeriods, Description, Information, CryptoContainer, Graph} from "./components/src";
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import Home from './Home';
+import Details from './Details';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+const Navigator = createStackNavigator({
+    Home: { screen: Home,
+      navigationOptions: {
+        headerShown: false,
+      }
+    },
+    Details: { screen: Details,
+        navigationOptions: {
+        headerShown: false,
+      } },
 });
+
+
+const App = createAppContainer(Navigator);
+
+export default App;
